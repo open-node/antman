@@ -1,6 +1,6 @@
 {
   "name": "ant-man",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Debug node.js process by client REPL on net socket and is silent",
   "main": "src/ant-man.js",
   "scripts": {
@@ -13,6 +13,7 @@
     "publish": "npm run release:pre && npm publish --registry=https://registry.npmjs.org/",
     "publish:github": "npm run release:pre && npm publish --registry=https://npm.pkg.github.com/"
   },
+  "bin": "./src/cli/ant-man.js",
   "pre-commit": ["lint", "test"],
   "repository": {
     "type": "git",

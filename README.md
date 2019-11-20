@@ -21,7 +21,7 @@ antman.start(listen, secret, { expire: 30 * 60 });
 
 * Execute the following command then enter REPL mode to debug
 <pre>
-antman --listen 9085
+antman connect 9085
 </pre>
 
 * REPL debugger mode
@@ -53,11 +53,11 @@ regist variable on agents
 
 #### Parameters
 
--   `key` **[string][8]** 
--   `value` **any** 
+-   `key` **[string][8]**
+-   `value` **any**
 -   `description` **[string][8]?**  (optional, default `"Undefined description text"`)
 
-Returns **void** 
+Returns **void**
 
 ### start
 
@@ -69,7 +69,7 @@ start socket server
 -   `secret` **[string][8]** OTP secret default null, unnecessary when secret be null (optional, default `null`)
 -   `opt` **[object][9]?** { expire: 900 } (optional, default `defaultOpt`)
 
-Returns **void** 
+Returns **void**
 
 ## antman
 
