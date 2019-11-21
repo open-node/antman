@@ -1,16 +1,16 @@
-# ant-man
+# @open-node/antman
 Debug node.js process by client REPL on net socket and is silent.
 
-[![Build status](https://travis-ci.com/open-node/ant-man.svg?branch=master)](https://travis-ci.org/open-node/ant-man)
-[![codecov](https://codecov.io/gh/open-node/ant-man/branch/master/graph/badge.svg)](https://codecov.io/gh/open-node/ant-man)
+[![Build status](https://travis-ci.com/open-node/antman.svg?branch=master)](https://travis-ci.org/open-node/antman)
+[![codecov](https://codecov.io/gh/open-node/antman/branch/master/graph/badge.svg)](https://codecov.io/gh/open-node/antman)
 
 # Installation
-<pre>npm i ant-man --save</pre>
+<pre>npm i @open-node/antman --save</pre>
 
 # Usage
 * your node.js process code
 <pre>
-const antman = require('ant-man');
+const antman = require('@open-node/antman');
 
 // regist variable on agents object
 antman.regist('key', value, 'description');
@@ -53,11 +53,11 @@ regist variable on agents
 
 #### Parameters
 
--   `key` **[string][8]** 
--   `value` **any** 
+-   `key` **[string][8]**
+-   `value` **any**
 -   `description` **[string][8]?**  (optional, default `"Undefined description text"`)
 
-Returns **void** 
+Returns **void**
 
 ### start
 
@@ -69,7 +69,7 @@ start socket server
 -   `secret` **[string][8]** OTP secret default null, unnecessary when secret be null (optional, default `null`)
 -   `opt` **[object][9]?** { expire: 900 } (optional, default `defaultOpt`)
 
-Returns **void** 
+Returns **void**
 
 ## antman
 

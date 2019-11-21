@@ -1,8 +1,8 @@
 {
-  "name": "ant-man",
-  "version": "0.5.0",
+  "name": "@open-node/antman",
+  "version": "0.6.0",
   "description": "Debug node.js process by client REPL on net socket and is silent",
-  "main": "src/ant-man.js",
+  "main": "src/antman.js",
   "scripts": {
     "lint": "eslint ./src/*",
     "test": "jest --coverage",
@@ -13,7 +13,7 @@
     "release": "npm run release:pre && npm publish --registry=https://registry.npmjs.org/",
     "release:github": "npm run release:pre && npm publish --registry=https://npm.pkg.github.com/@open-node"
   },
-  "bin": "./src/cli/ant-man.js",
+  "bin": "./src/cli/antman.js",
   "pre-commit": ["lint", "test"],
   "repository": {
     "type": "git",
@@ -27,9 +27,6 @@
   },
   "dependencies": {
     "otplib": "^11.0.1"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@open-node"
   },
   "homepage": "https://github.com/open-node/ant-man#readme",
   "devDependencies": {

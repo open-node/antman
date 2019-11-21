@@ -18,7 +18,7 @@ const main = async listen => {
     removeHistoryDuplicates: true
   });
 
-  rl.setPrompt("CEM> ");
+  rl.setPrompt("Ant> ");
   const log = (...args) => {
     console.log(...args);
     rl.prompt();
