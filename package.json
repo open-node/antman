@@ -1,6 +1,6 @@
 {
   "name": "@open-node/antman",
-  "version": "0.6.0",
+  "version": "0.6.2",
   "description": "Debug node.js process by client REPL on net socket and is silent",
   "main": "src/antman.js",
   "scripts": {
@@ -10,25 +10,25 @@
     "readme": "d=`head -n 33 README.md` && (echo \"$d\n\n\n\" && documentation build src/** -f md) > README.md",
     "docs": "documentation build src/** -f html -o ./docs",
     "release:pre": "npm run readme && npm run docs",
-    "release": "npm run release:pre && npm publish --registry=https://registry.npmjs.org/",
-    "release:github": "npm run release:pre && npm publish --registry=https://npm.pkg.github.com/@open-node"
+    "release": "npm run release:pre && npm publish --registry=https://registry.npmjs.org --access=public",
+    "release:github": "npm run release:pre && npm publish --registry=https://npm.pkg.github.com/"
   },
   "bin": "./src/cli/antman.js",
   "pre-commit": ["lint", "test"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/open-node/ant-man.git"
+    "url": "git+https://github.com/open-node/antman.git"
   },
   "keywords": ["debugger", "process monitor", "spy", "probe", "develop"],
   "author": "Redstone Zhao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/open-node/ant-man/issues"
+    "url": "https://github.com/open-node/antman/issues"
   },
   "dependencies": {
     "otplib": "^11.0.1"
   },
-  "homepage": "https://github.com/open-node/ant-man#readme",
+  "homepage": "https://github.com/open-node/antman#readme",
   "devDependencies": {
     "jest": "^24.9.0"
   }

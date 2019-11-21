@@ -28,7 +28,7 @@ antman connect 9085
 <pre>
 `$` is the agent whose be debugged node.js process
 `help` is tips info for you
-<pre>
+</pre>
 
 
 
