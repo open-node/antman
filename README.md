@@ -10,7 +10,7 @@ Debug node.js process by client REPL on net socket and is silent.
 # Usage
 * your node.js process code
 <pre>
-const antman = require('@open-node/antman');
+const antman = require('@open-node/antman')();
 
 // regist variable on agents object
 antman.regist('key', value, 'description');
