@@ -38,9 +38,17 @@ function Antman() {
   };
 
   const handler = (secret, expireMS) => client => {
+    const write = txt => {
+      try {
+        client.write(txt);
+      } catch (e) {
+        console.error(e);
+      }
+    };
+
     const logout = () => {
       client.authed = false;
-      client.write(loginTips);
+      write(loginTips);
     };
 
     const login = token => {
@@ -66,9 +74,9 @@ function Antman() {
         const $ = authed ? agents : login;
         const help = authed ? descriptions : loginTips;
         const res = await fn($, help);
-        client.write(util.formatWithOptions({ colors: true }, res));
+        write(util.formatWithOptions({ colors: true }, res));
       } catch (e) {
-        client.write(util.formatWithOptions({ colors: true }, e));
+        write(util.formatWithOptions({ colors: true }, e));
       }
     };
 
