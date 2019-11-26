@@ -1,6 +1,6 @@
 {
   "name": "@open-node/antman",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "description": "Debug node.js process by client REPL on net socket and is silent",
   "main": "src/antman.js",
   "scripts": {

@@ -6,9 +6,8 @@ const error = (...args) => {
   process.exit();
 };
 
-const main = async listen => {
-  console.log(listen);
-  const stream = net.connect(listen);
+const main = async (port, host = null) => {
+  const stream = net.connect(port, host);
 
   const rl = readline.createInterface({
     input: process.stdin,
