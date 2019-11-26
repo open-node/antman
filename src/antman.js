@@ -39,6 +39,10 @@ function Antman() {
 
   const handler = (secret, expireMS) => client => {
     const write = txt => {
+      if (client.destroyed) {
+        console.log("Client has disconnect");
+        return;
+      }
       try {
         client.write(txt);
       } catch (e) {
