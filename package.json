@@ -1,13 +1,13 @@
 {
   "name": "@open-node/antman",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "description": "Debug node.js process by client REPL on net socket and is silent",
   "main": "src/antman.js",
   "scripts": {
     "lint": "eslint ./src/*",
     "test": "jest --coverage",
     "test:watch": "jest --watch src",
-    "readme": "d=`head -n 33 README.md` && (echo \"$d\n\n\n\" && documentation build src/** -f md) > README.md",
+    "readme": "d=`head -n 35 README.md` && (echo \"$d\n\n\n\" && documentation build src/** -f md) > README.md",
     "docs": "documentation build src/** -f html -o ./docs",
     "release:pre": "npm run readme && npm run docs",
     "release": "npm run release:pre && npm publish --registry=https://registry.npmjs.org --access=public",
